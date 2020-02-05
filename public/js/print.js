@@ -13,9 +13,9 @@ $('#print').bind('click', function() {
     fetch(url) 
     .then((resp) => resp.json())
     .then(function(data) {
-        $('#msg').val(data);
+        $('#msg').html(data.content);
     })
     .catch(function(err) {
-        $('#msg').val("Error ",err);
+        $('#msg').html("Error ",err);
     });
 });

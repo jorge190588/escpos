@@ -51,5 +51,5 @@ exports.printFolder =  async function(req,res){
         await printer.setContent(document.get());    
     });
     await printer.end();
-    res.send(JSON.stringify({content: files}));
+    res.send(JSON.stringify({content: "Archivos impresos de la carpeta "+routeParam }));
 }
