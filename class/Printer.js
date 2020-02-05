@@ -34,6 +34,10 @@ class Printer{
     cut= async ()=>{
         await this.printer.cut();
     }
+
+    getPrinter=()=>{
+        return this.printer;
+    }
 }
 
 module.exports = Printer;

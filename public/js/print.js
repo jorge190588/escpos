@@ -1,13 +1,21 @@
 $('#print').bind('click', function() {
     let route= $('#route').val();
     let document = $('#document').val();
+    let url ="";
+    if (route===""){
+        $('#msg').val("Ingrese una carpeta");
+    }else if (route!=="" && document===""){
+        url="/print/printFolder/"+route;
+    }else{
+        url="/print/print/"+route+"/"+document;
+    }
 
-    fetch("/print/print/"+route+"/"+document) 
-    .then((resp) => resp.json()) // Transform the data into json
+    fetch(url) 
+    .then((resp) => resp.json())
     .then(function(data) {
-        console.log(data);
+        $('#msg').val(data);
     })
-    .catch(function() {
-        console.log("print error");
+    .catch(function(err) {
+        $('#msg').val("Error ",err);
     });
 });

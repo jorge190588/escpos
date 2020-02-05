@@ -1,0 +1,3 @@
+        Ejemplo de impresión
+      Empresa Jorge Santos S.A. # 2
+
