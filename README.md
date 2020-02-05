@@ -8,5 +8,9 @@ Print in star tsp100 printer using escpost dependency.
 
 Note: Not forget install Zadig if you use windows OS
 
+![Zadig in windows](./imgs/zadig.png)
 
+# Print 
+
+![Zadig in windows](./imgs/print_example.png)
 
